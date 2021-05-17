@@ -13,7 +13,7 @@ public class TestContadores {
     public void testIncremental(){
         Contador c = new Contador(2,2,10);
 
-        assertEquals(6.0,c.sumarNumeros());
+        assertEquals(2.0,c.sumarNumeros());
     }
 
 
