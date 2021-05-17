@@ -16,5 +16,11 @@ public class TestContadores {
         assertEquals(2.0,c.sumarNumeros());
     }
 
+    @Test
+    public void testReseteo(){
+        Contador c = new Contador(2,6,29);
+        assertEquals(29, c.resetearNumeros());
+    }
+
 
 }
