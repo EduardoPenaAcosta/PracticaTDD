@@ -8,7 +8,7 @@ public class TestContadores {
     @Test
     public void testContador(){
 
-        Contador c = new Contador(3,h,4);
+        Contador c = new Contador(2,2,6);
     }
 
 }
