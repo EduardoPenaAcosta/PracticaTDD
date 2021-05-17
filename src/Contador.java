@@ -48,7 +48,12 @@ public class Contador {
             System.out.println("Valor que se va a incrementar: " + getValorIncremental());
             System.out.println("Valor acutal:" + valorActual);
             
-        } while (getValorFinal() <= valorActual);
+        } while (getValorFinal() >= valorActual);
+
+        if( getValorFinal() >= valorActual){
+            System.out.println("Se ha superado el valor actual, se resetea a 0");
+            setValorInicial(0);
+        }
 
         return getValorInicial();
 

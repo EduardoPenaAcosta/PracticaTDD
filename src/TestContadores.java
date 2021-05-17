@@ -9,4 +9,12 @@ public class TestContadores {
         Contador c = new Contador(2,2,6);
     }
 
+    @Test
+    public void testIncremental(){
+        Contador c = new Contador(2,2,10);
+
+        assertEquals(6.0,c.sumarNumeros());
+    }
+
+
 }
