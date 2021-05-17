@@ -19,7 +19,7 @@ public class TestContadores {
     @Test
     public void testReseteo(){
         Contador c = new Contador(2,6,29);
-        assertEquals(29, c.resetearNumeros());
+        assertEquals(0, c.resetearNumeros());
     }
 
 
