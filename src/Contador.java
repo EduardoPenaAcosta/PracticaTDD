@@ -3,13 +3,21 @@ public class Contador {
     double valorInicial;
     double valorFinal;
     double valorIncremental;
+    double valorActual;
 
+
+    public double getValorActual(){
+        return this.valorActual;
+    }
 
     public Contador(double valorInicial, double valorIncremental, double valorFinal) {
         this.valorInicial = valorInicial;
         this.valorFinal = valorFinal;
         this.valorIncremental = valorIncremental;
+
     }
+
+
 
     public double getValorInicial() {
         return this.valorInicial;
@@ -37,31 +45,28 @@ public class Contador {
 
     public double sumarNumeros(){
 
-        double valorActual = getValorInicial();
-
-        System.out.println("El valor inicial es: " + getValorInicial());
-        System.out.println("El valor final es: " + getValorFinal());
-        System.out.println("El valor incremental es: " + getValorIncremental());
+        valorActual = getValorInicial();
 
         do {
             valorActual = valorActual + getValorIncremental();
             System.out.println("Valor que se va a incrementar: " + getValorIncremental());
             System.out.println("Valor acutal:" + valorActual);
             
-        } while (getValorFinal() >= valorActual);
+        } while (getValorFinal() > valorActual);
 
-        if( getValorFinal() >= valorActual){
+        if( getValorFinal() < valorActual){
             System.out.println("Se ha superado el valor actual, se resetea a 0");
-            setValorInicial(0);
+            valorActual = getValorInicial();
         }
 
-        return getValorInicial();
+        return valorActual;
 
     }
 
     public double resetearNumeros(){
+        
 
-        return setValorInicial(0);
+        return getValorActual();
     }
 
 
